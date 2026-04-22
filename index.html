@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tech Helpers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #ffffff;
+      color: #111827;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      border-bottom: 1px solid #e5e7eb;
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-left img {
+      height: 42px;
+    }
+
+    .nav-right {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .nav-right a {
+      text-decoration: none;
+      color: #374151;
+      font-size: 14px;
+    }
+
+    .btn {
+      background: #f97316;
+      color: white !important;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background: #ea580c;
+    }
+
+    /* HERO */
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #fff7ed;
+      color: #f97316;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .headline {
+      font-size: 38px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .headline span {
+      color: #f97316;
+    }
+
+    .locations {
+      margin-top: 12px;
+      color: #6b7280;
+      font-size: 15px;
+    }
+
+    .subtext {
+      margin-top: 10px;
+      color: #374151;
+      font-size: 16px;
+    }
+
+    /* SERVICES */
+    .services-bar {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .service {
+      flex: 1;
+      min-width: 160px;
+      background: #f9fafb;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      transition: 0.2s;
+    }
+
+    .service:hover {
+      transform: translateY(-3px);
+      border-color: #f97316;
+    }
+
+    .service i {
+      font-size: 22px;
+      margin-bottom: 6px;
+      color: #f97316;
+    }
+
+    .coming {
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    /* FORM */
+    .card {
+      margin-top: 40px;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    input {
+      width: 100%;
+      padding: 13px;
+      margin-top: 12px;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      font-size: 14px;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #f97316;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 15px;
+      background: #f97316;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ea580c;
+    }
+
+    /* TRUST */
+    .trust {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 14px;
+      color: #374151;
+    }
+
+    .trust div {
+      flex: 1 1 45%;
+      text-align: center;
+    }
+
+    /* FOOTER */
+    .footer {
+      margin-top: 50px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer a {
+      color: #111827;
+      text-decoration: none;
+      display: block;
+      margin-top: 5px;
+    }
+
+    .social i {
+      font-size: 18px;
+      margin-right: 8px;
+    }
+
+    .copy {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 12px;
+      color: #282a2c;
+    }
+
+    @media(max-width:768px){
+      .services-bar {
+        flex-direction: column;
+      }
+
+      .footer {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .nav-right {
+        gap: 12px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <img src="logo-new.png">
+    </div>
+
+    <div class="nav-right">
+      <a href="tel:+918292872230">Contact</a>
+      <a href="https://wa.me/918292872230" class="btn">WhatsApp</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="tag">🚧 Under Maintenance</div>
+
+<div class="headline">
+  Launching soon across <span>Delhi NCR</span>
+</div>
+
+<div class="locations">
+  Gurgaon • Noida • Faridabad • Ghaziabad • Delhi
+</div>
+
+<div class="subtext">
+  Doorstep Laptop Repair — fast & reliable
+</div>
+
+<div class="services-bar">
+
+  <div class="service">
+    <i class="fas fa-laptop"></i>
+    <p>Laptop Repair</p>
+    <div class="coming">Available Soon</div>
+  </div>
+
+  <div class="service">
+    <i class="fas fa-snowflake"></i>
+    <p>AC Repair</p>
+    <div class="coming">Coming Soon</div>
+  </div>
+
+  <div class="service">
+    <i class="fas fa-blender"></i>
+    <p>Refrigerator</p>
+    <div class="coming">Coming Soon</div>
+  </div>
+
+  <div class="service">
+    <i class="fas fa-tv"></i>
+    <p>TV Repair</p>
+    <div class="coming">Coming Soon</div>
+  </div>
+
+</div>
+
+<div class="card">
+  <h3>Request Early Service</h3>
+
+  <input type="text" id="name" placeholder="Full Name">
+  <input type="tel" id="phone" placeholder="Phone Number">
+  <input type="text" id="area" placeholder="Your Area / Sector">
+
+  <button onclick="send()">Request on WhatsApp</button>
+</div>
+
+<div class="trust">
+  <div>✔ Verified Technicians</div>
+  <div>✔ Transparent Pricing</div>
+  <div>✔ Doorstep Service</div>
+  <div>✔ Fast Response</div>
+</div>
+
+<div class="footer">
+
+  <div>
+    <b>Contact</b>
+    <a href="tel:+918292872230">+91 8292872230</a>
+    <a href="https://wa.me/918292872230">Chat on WhatsApp</a>
+  </div>
+
+  <div class="social">
+    <b>Follow</b><br>
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-facebook"></i>
+    <a href="https://x.com/techhelpers_in" target="_blank"><i class="fab fa-twitter"></i></a>
+  </div>
+
+</div>
+
+<div class="copy">
+  © 2026 Tech Helpers • techhelpers.in
+</div>
+
+</div>
+
+<script>
+function send(){
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const area = document.getElementById("area").value;
+
+  if(!name || !phone || !area){
+    alert("Please fill all details");
+    return;
+  }
+
+  const msg = `New Booking:
+Name: ${name}
+Phone: ${phone}
+Area: ${area}`;
+
+  window.open("https://wa.me/918292872230?text=" + encodeURIComponent(msg), "_blank");
+}
+</script>
+
+</body>
+</html>
